@@ -1,0 +1,21 @@
+package com.company;
+
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class string_cont_digits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter String");
+        String text = scanner.nextLine();
+        String number = null;
+        if (Pattern.matches("[a-zA-Z]+",text) && text.length()>2){
+            number = text;
+            System.out.println("String Contains Alphabets");
+        }else if(Pattern.matches("[0-9]+",text)&& text.length()>2){
+        number = text;
+        System.out.println("String Contains Digits");
+        }
+        System.out.println(number);
+    }
+}
